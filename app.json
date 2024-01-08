@@ -25,6 +25,14 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Devagram precisa de acesso as fotos para funcionar corretamente."
+        }
+      ]
+    ]
   }
 }
