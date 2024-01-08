@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { useFonts } from 'expo-font';
+import {  useFonts, Inter_900Black, Inter_400Regular, Inter_700Bold } from '@expo-google-fonts/inter';
 import * as SplashScreen from 'expo-splash-screen';
 import React, { useCallback } from 'react';
 
@@ -9,7 +9,9 @@ SplashScreen.preventAutoHideAsync();
 export default function App() {
 
   const [fontsLoaded] = useFonts({
-    'Montserrat-Black': require('./assets/fonts/Montserrat-Black.ttf'),
+    Inter_900Black,
+    Inter_700Bold,
+    Inter_400Regular,
   });
 
 
@@ -32,7 +34,7 @@ export default function App() {
     fontsLoaded ?
 
     <View style={styles.container} onLayout={onLayoutRootView}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text style={{fontFamily:'Inter_700Bold' }}>Open up App.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
     </View>
     : null
