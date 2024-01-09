@@ -34,7 +34,7 @@ export default function App() {
     fontsLoaded ?
 
     <View style={styles.container} onLayout={onLayoutRootView}>
-      <Text style={{fontFamily:'Inter_700Bold' }}>Open up App.tsx to start working on your app!</Text>
+      <Text style={{fontFamily:'Inter_400Regular' }}>Open up App.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
     </View>
     : null

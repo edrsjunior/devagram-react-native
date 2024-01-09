@@ -1,4 +1,18 @@
 {
+  "colors" : {
+    "primaryColor": "#5E49FF",
+    "greenColor": "#3BD42D",
+    "greenWaterColor": "#25CBD3",
+    "lightBlueColor": "#F0F5FF",
+    "whiteColor": "#FFFFFF",
+    "grayColoree": "#F4F4F4",
+    "grayColor01": "#DADADA",
+    "grayColor02": "#7C7786",
+    "grayColor03": "#4D4C4D",
+    "grayColor04": "#333333"
+
+  },
+
   "expo": {
     "name": "devagram",
     "slug": "devagram",
