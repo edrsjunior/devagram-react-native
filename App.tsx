@@ -1,18 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import {  useFonts, Inter_900Black, Inter_400Regular, Inter_700Bold } from '@expo-google-fonts/inter';
+import {  useFonts, Inter_600SemiBold, Inter_400Regular, Inter_700Bold } from '@expo-google-fonts/inter';
 import * as SplashScreen from 'expo-splash-screen';
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
+import Button from './src/_components/Button';
+import Input from './src/_components/Input';
 
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
 
   const [fontsLoaded] = useFonts({
-    Inter_900Black,
+    Inter_600SemiBold,
     Inter_700Bold,
     Inter_400Regular,
   });
+
+  const [email,setEmail] = useState<string>('');
 
 
   // LOADSCREEN
@@ -34,7 +38,11 @@ export default function App() {
     fontsLoaded ?
 
     <View style={styles.container} onLayout={onLayoutRootView}>
-      <Text style={{fontFamily:'Inter_400Regular' }}>Open up App.tsx to start working on your app!</Text>
+      <Input 
+        onChangeText={(e:string) => {setEmail(e)}} 
+        placeholder='example.mail@mydomain.com' 
+        value={email}></Input>
+      <Button onPress={() => {}} placeholder='Clique aqui' loading={false} disable={false}></Button>
       <StatusBar style="auto" />
     </View>
     : null
